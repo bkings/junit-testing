@@ -1,5 +1,6 @@
 package com.bjr;
 
+import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.*;
@@ -12,15 +13,20 @@ import static org.junit.jupiter.api.Assertions.*;
 
 class GreetingTest {
 
+    Greeting greeting;
+
+    @BeforeEach
+    void setUp() {
+        greeting = new Greeting();
+    }
+
     @Test
     void helloWorld() {
-        Greeting greeting = new Greeting();
         assertEquals("Hello World", greeting.helloWorld());
     }
 
     @Test
     void testHelloWorld() {
-        Greeting greeting = new Greeting();
         assertEquals("Hello Jackson", greeting.helloWorld("Jackson"));
     }
 }
