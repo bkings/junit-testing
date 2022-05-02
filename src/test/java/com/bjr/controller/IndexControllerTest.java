@@ -5,6 +5,7 @@ import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 
+import static org.assertj.core.api.Assertions.assertThat;
 import static org.junit.jupiter.api.Assertions.*;
 
 /**
@@ -25,6 +26,8 @@ class IndexControllerTest {
     @Test
     void home() {
         assertEquals("home", view.home(), "Other view returned");
+        // from assertJ library
+        assertThat(view.home()).isEqualTo("home");
     }
 
     /**
