@@ -1,5 +1,6 @@
 package com.bjr.models;
 
+import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.*;
@@ -12,6 +13,7 @@ import static org.junit.jupiter.api.Assertions.*;
 
 class OwnerTest {
 
+    @DisplayName("Here we look at Dependent Assertions")
     @Test
     void dependentAssertions() {
         Owner owner = new Owner("Samantha", "Kumari");
