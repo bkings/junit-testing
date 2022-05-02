@@ -1,6 +1,8 @@
 package com.bjr.controller;
 
+import com.bjr.exceptions.DataNotFoundException;
 import org.junit.jupiter.api.BeforeEach;
+import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.*;
@@ -31,5 +33,13 @@ class IndexControllerTest {
     @Test
     void dashboard() {
         assertTrue("dashboard".equals(view.dashboard()), () -> "Message from a expensive method which is evaluated only in a failure condition");
+    }
+
+    @Test
+    @DisplayName("Test for exception")
+    void exceptionTest() {
+        assertThrows(DataNotFoundException.class, () -> {
+           view.handler();
+        });
     }
 }
