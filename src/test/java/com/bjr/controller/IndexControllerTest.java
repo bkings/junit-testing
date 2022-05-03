@@ -1,6 +1,7 @@
 package com.bjr.controller;
 
 import com.bjr.exceptions.DataNotFoundException;
+import com.bjr.interfaces.TestInterface;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
@@ -14,7 +15,7 @@ import static org.junit.jupiter.api.Assertions.*;
  * @since 2022-04-12 07:48
  */
 
-class IndexControllerTest {
+class IndexControllerTest implements TestInterface {
 
     private IndexController view;
 
