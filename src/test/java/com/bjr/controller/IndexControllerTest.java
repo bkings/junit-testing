@@ -2,10 +2,7 @@ package com.bjr.controller;
 
 import com.bjr.exceptions.DataNotFoundException;
 import com.bjr.interfaces.TestInterface;
-import org.junit.jupiter.api.BeforeEach;
-import org.junit.jupiter.api.DisplayName;
-import org.junit.jupiter.api.RepeatedTest;
-import org.junit.jupiter.api.Test;
+import org.junit.jupiter.api.*;
 
 import static org.assertj.core.api.Assertions.assertThat;
 import static org.junit.jupiter.api.Assertions.*;
@@ -52,5 +49,10 @@ class IndexControllerTest implements TestInterface {
     @DisplayName("Repeated Test")
     void repeatedTest() {
         assertThat(10).isEqualTo(10);
+    }
+
+    @RepeatedTest(5)
+    void dIRepeated(TestInfo testInfo, RepetitionInfo repetitionInfo) {
+        System.out.println(testInfo.getDisplayName() + " " + repetitionInfo.getCurrentRepetition());
     }
 }

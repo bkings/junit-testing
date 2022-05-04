@@ -24,4 +24,6 @@ public interface TestInterface {
     default void beforeAll() {
         System.out.println("Doing something before any test runs");
     }
+
+    //default beforeEach - output test information
 }
