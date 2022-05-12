@@ -44,15 +44,4 @@ class IndexControllerTest implements TestInterface {
            view.handler();
         });
     }
-
-    @RepeatedTest(value = 10, name = "{displayName} : {currentRepetition} of {totalRepetitions}")
-    @DisplayName("Repeated Test")
-    void repeatedTest() {
-        assertThat(10).isEqualTo(10);
-    }
-
-    @RepeatedTest(5)
-    void dIRepeated(TestInfo testInfo, RepetitionInfo repetitionInfo) {
-        System.out.println(testInfo.getDisplayName() + " " + repetitionInfo.getCurrentRepetition());
-    }
 }
