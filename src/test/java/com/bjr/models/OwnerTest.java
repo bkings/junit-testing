@@ -2,6 +2,8 @@ package com.bjr.models;
 
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
+import org.junit.jupiter.params.ParameterizedTest;
+import org.junit.jupiter.params.provider.ValueSource;
 
 import static org.junit.jupiter.api.Assertions.*;
 
@@ -28,5 +30,11 @@ class OwnerTest {
                         () -> assertEquals("NY", owner.getAddress(), "Address Mismatch"),
                         () -> assertEquals("2345", owner.getNumber(), "Number not matched"))
         );
+    }
+
+    @ParameterizedTest
+    @ValueSource(strings = {"Test","with","parameters"})
+    void testValueSource(String value) {
+        System.out.println(value);
     }
 }
