@@ -1,7 +1,6 @@
 package com.bjr.models;
 
 import com.bjr.interfaces.RepeatedTestInterface;
-import com.bjr.interfaces.TestInterface;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.RepeatedTest;
 import org.junit.jupiter.api.RepetitionInfo;
